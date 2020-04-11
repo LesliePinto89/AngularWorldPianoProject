@@ -1,0 +1,57 @@
+<h1> Template-Based Contact Form Example </h1>
+<!-- <form #myform = "ngForm" (ngSubmit) = "onSubmit(myform)" > 
+  <input type = "text" name = "fullName" placeholder = "Your full name" ngModel> <br/>
+  <input type = "email" name = "email" placeholder = "Your email" ngModel><br/>
+  <textarea name = "message" placeholder = "Your message" ngModel></textarea><br/>
+  <input type = "submit" value = "Send">
+</form> -->
+
+<!-- <form [formGroup]="loginFormGroup"> 
+  <div class="field">
+		<div class="control">
+  <input class= "input" placeholder = "Name" formControlName = "fullName">
+  </div>
+ </div>
+
+ <div class="field">
+  <div class="control">
+  <input class = "input" placeholder ="Your email" formControlName = "email">
+</div>
+</div>
+
+<div class="field">
+  <div class="control">
+  <input class = "input" placeholder = "Your message" formControlName = "message">
+</div>
+</div>
+
+<div class="control">
+  <button class="button is-link is-small">Submit</button>
+</div>
+</form> -->
+
+
+
+<form [formGroup]="contactForm"> 
+  <div class="field">
+		<div class="control">
+  <input class= "input" placeholder = "Name" formControlName = "name">
+  </div>
+ </div>
+
+ <div class="field">
+  <div class="control">
+  <input class = "input" placeholder ="Your email" formControlName = "email">
+</div>
+</div>
+
+<div class="field">
+  <div class="control">
+  <textarea class = "input" placeholder = "Your message" formControlName = "message"></textarea>
+</div>
+</div>
+
+<div class="control">
+  <button class="button is-link is-small">Submit</button>
+</div>
+</form>
