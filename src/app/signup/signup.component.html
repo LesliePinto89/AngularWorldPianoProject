@@ -22,7 +22,7 @@
           <div class="control">
             <input class="input" (keyup)="!f.confirmPassword.valid ? showConfirmError = true : showConfirmError = false" 
             formControlName="confirmPassword" placeholder="Confirm Password">
-              <div *ngIf="showConfirmError">
+              <div *ngIf="showConfirmError && f.confirmPassword.value.length > 0">
                 Password does not match
              </div>
           </div>

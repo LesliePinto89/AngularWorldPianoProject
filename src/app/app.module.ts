@@ -9,8 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { AdminModule } from './admin/admin.module';
-import { AngularFireModule } from "@angular/fire";
-import { AngularFireAuthModule } from "@angular/fire/auth";
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 import { ReactiveFormsModule } from '@angular/forms';
 import { JazzDetailsComponent } from './jazz-details/jazz-details.component'
 import { ApiService } from './api.service';
