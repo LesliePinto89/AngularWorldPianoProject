@@ -19,6 +19,7 @@ import { FormSubmitDirective } from './form-submit.directive';
 import { ControlErrorsDirective } from './control-errors.directive';
 import { ControlErrorContainerDirective } from './control-error-container.directive';
 import { ControlErrorComponent } from './control-error/control-error.component';
+import { SignupComponent } from './signup/signup.component';
 
 var config = {
   apiKey: "AIzaSyBULM4xkl_AUtS3zy3Ick43ex2OeU6pa3M",
@@ -39,6 +40,7 @@ var config = {
     ControlErrorsDirective,
     ControlErrorContainerDirective,
     ControlErrorComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,
