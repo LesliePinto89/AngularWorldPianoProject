@@ -38,5 +38,13 @@ html{
   flex-direction: column;
   justify-content: space-between
  }
+
+ .container{
+    position: relative;
+    // z-index: 10;
+    // background: #f7f7f7;
+    margin-top: 6rem;
+    margin-bottom: 10rem;
+ }
   
  

@@ -1,4 +1,68 @@
-<div class="container">
+<!-- Material form register -->
+<mdb-card>
+
+  <mdb-card-header class="info-color white-text text-center py-4">
+    <h5>
+      <strong>Sign up</strong>
+    </h5>
+  </mdb-card-header>
+
+  <!--Card content-->
+  <mdb-card-body class="px-lg-5 pt-0">
+
+    <!-- Form -->
+    <form [formGroup]="signupForm" class="text-center" style="color: #757575;">
+
+      <!-- E-mail -->
+      <div class="md-form mt-0">
+        <input id="materialRegisterFormEmail" class="form-control input" formControlName="email" mdbInput>
+        <label for="materialRegisterFormEmail">E-mail</label>
+      </div>
+
+      <!-- <input class="input" (keyup)="f.password.valid ? toggleFormState('confirmPassword', confirmPassword, true) : toggleFormState('confirmPassword', confirmPassword,false)"
+      formControlName="password" placeholder="Password"> -->
+
+      <!-- Password -->
+      <div class="md-form">
+        <input id="materialRegisterFormPassword" class="form-control input" 
+        (keyup)="f.password.valid ? toggleFormState('confirmPassword', confirmPassword, true) : toggleFormState('confirmPassword', confirmPassword,false)" 
+        formControlName="password" aria-describedby="materialRegisterFormPasswordHelpBlock" mdbInput>
+        <label for="materialRegisterFormPassword">Password</label>
+      </div>
+
+
+      <div class="md-form">
+        <input id="materialRegisterFormConfirmPassword" class="form-control input" 
+        (keyup)="!f.confirmPassword.valid ? showConfirmError = true : showConfirmError = false" 
+        formControlName="confirmPassword">
+        <label for="materialRegisterFormConfirmPassword">Confirm Password</label>
+        <div *ngIf="showConfirmError && f.confirmPassword.value.length > 0">
+          Password does not match
+       </div>
+      </div>
+
+      <!-- Sign up button -->
+      <button mdbBtn color="info" outline="true" rounded="true" block="true" class="my-4 waves-effect z-depth-0" mdbWavesEffect
+        type="submit">Sign up</button>
+
+
+    </form>
+    <!-- Form -->
+
+  </mdb-card-body>
+
+</mdb-card>
+<!-- Material form register -->
+
+
+
+
+
+
+
+
+
+<!-- <div class="container">
   <div class="row centered-form">
   <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
     <div class="panel panel-default">
@@ -36,4 +100,4 @@
     </div>
   </div>
 </div>
-</div>
+</div> -->
