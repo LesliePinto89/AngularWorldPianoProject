@@ -1,4 +1,5 @@
-<h1> Template-Based Contact Form Example </h1>
+<!-- Template drivenu form -->
+
 <!-- <form #myform = "ngForm" (ngSubmit) = "onSubmit(myform)" > 
   <input type = "text" name = "fullName" placeholder = "Your full name" ngModel> <br/>
   <input type = "email" name = "email" placeholder = "Your email" ngModel><br/>
@@ -6,52 +7,80 @@
   <input type = "submit" value = "Send">
 </form> -->
 
-<!-- <form [formGroup]="loginFormGroup"> 
-  <div class="field">
-		<div class="control">
-  <input class= "input" placeholder = "Name" formControlName = "fullName">
-  </div>
- </div>
+<!-- Reactive form -->
+<!-- Material form contact -->
+<mdb-card>
 
- <div class="field">
-  <div class="control">
-  <input class = "input" placeholder ="Your email" formControlName = "email">
-</div>
-</div>
-
-<div class="field">
-  <div class="control">
-  <input class = "input" placeholder = "Your message" formControlName = "message">
-</div>
-</div>
-
-<div class="control">
-  <button class="button is-link is-small">Submit</button>
-</div>
-</form> -->
+  <mdb-card-header class="info-color white-text text-center py-4">
+    <h5>
+      <strong>Contact us</strong>
+    </h5>
+  </mdb-card-header>
 
 
+  <!--Card content-->
+  <mdb-card-body class="px-lg-5 pt-0">
 
-<form [formGroup]="contactForm"> 
-  <div class="field">
-		<div class="control">
-  <input class= "input" placeholder = "Name" formControlName = "name">
-  </div>
- </div>
+    <!-- Form -->
+    <form [formGroup]="contactForm" class="text-center" style="color: #757575;"> 
+      <!-- <div class="field">
+        <div class="control">
+         <input class= "input" placeholder = "Name" formControlName = "name">
+       </div>
+      </div> -->
 
- <div class="field">
-  <div class="control">
-  <input class = "input" placeholder ="Your email" formControlName = "email">
-</div>
-</div>
 
-<div class="field">
-  <div class="control">
-  <textarea class = "input" placeholder = "Your message" formControlName = "message"></textarea>
-</div>
-</div>
+    <!-- <form class="text-center" style="color: #757575;"> -->
 
-<div class="control">
-  <button class="button is-link is-small">Submit</button>
-</div>
-</form>
+      <!-- Name -->
+      <div class="md-form mt-3">
+        <label for="materialContactFormName">Name</label>
+        <input id="materialContactFormName" class="form-control input" formControlName = "name" mdbInput>
+        
+      </div>
+
+      <!-- E-mail -->
+      <div class="md-form">
+        <label for="materialContactFormEmail">E-mail</label>
+        <input id="materialContactFormEmail" class="form-control input" formControlName = "email" mdbInput>
+       
+      </div>
+
+      <!--Message-->
+      <div class="md-form">
+        <textarea id="materialContactFormMessage" class="form-control md-textarea input" formControlName = "message" mdbInput></textarea>
+        <label for="materialContactFormMessage">Message</label>
+      </div>
+
+      <!-- Send button -->
+      <button mdbBtn color="info" outline="true" rounded="true" block="true" class="z-depth-0 my-4 waves-effect" mdbWavesEffect
+        type="submit">Send</button>
+
+    </form>
+    <!-- Form -->
+
+  </mdb-card-body>
+
+</mdb-card>
+<!-- Material form contact -->
+
+<!-- <form [formGroup]="contactForm"> 
+    <div class="field">
+      <div class="control">
+       <input class= "input" placeholder = "Name" formControlName = "name">
+     </div>
+    </div>
+    <div class="field">
+      <div class="control">
+        <input class = "input" placeholder ="Your email" formControlName = "email">
+      </div>
+    </div>
+    <div class="field">
+      <div class="control">
+        <textarea class = "input" placeholder = "Your message" formControlName = "message"></textarea>
+      </div>
+    </div>
+    <div class="control">
+      <button class="button is-link is-small">Submit</button>
+    </div>
+  </form> -->

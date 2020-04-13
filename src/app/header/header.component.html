@@ -1,4 +1,38 @@
-<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+<header class="h-100">
+  <mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark indigo scrolling-navbar intro-fixed-nav" [containerInside]="false">
+      <mdb-navbar-brand>
+        <a  class="logo navbar-brand" href="#"><strong>ThemIvoryKeys</strong></a>
+      </mdb-navbar-brand>
+      <links>
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item active waves-light" mdbWavesEffect>
+                  <a class="nav-link" routerLink="/home">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item waves-light" mdbWavesEffect>
+                  <a class="nav-link" routerLink="/about">About</a>
+              </li>
+              <li class="nav-item waves-light" mdbWavesEffect>
+                  <a class="nav-link" routerLink="/people">People</a>
+              </li>
+              <li class="nav-item waves-light" mdbWavesEffect>
+                <a class="nav-link" routerLink="/contact">Contact</a>
+             </li>
+             <li *ngIf="!authService.isLoggedIn" class="nav-item waves-light" mdbWavesEffect>
+              <a class="nav-link" routerLink="/signup">SignUp</a>
+             </li>
+             <li class="nav-item waves-light" mdbWavesEffect>
+              <a class="nav-link" routerLink="/admin/list">Admin</a>
+             </li>
+             <li *ngIf="authService.isLoggedIn" class="nav-item waves-light" mdbWavesEffect>
+              <a class="nav-link" (click)="authService.logout()">Logout</a>
+            </li>
+          </ul>
+      </links>
+  </mdb-navbar>
+</header>
+
+<!--Main Layout-->
+<!-- <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo fixed-top scrolling-navbar">
   <a  class="navbar-brand"  href="#">ThemIvoryKeys</a>
   <div  class="collapse navbar-collapse"  id="navbarText">
   <ul  class="navbar-nav">
@@ -20,11 +54,14 @@
   <li  class="nav-item">
     <a  class="nav-link"  routerLink="/admin/list">Admin</a>
     </li>
+    <li  *ngIf="authService.isLoggedIn" class="nav-item">
+      <a class="nav-link"  (click)="authService.logout()">Logout</a>
+    </li>
   </ul>
   </div>
-  </nav>
-
-<li  *ngIf="authService.isLoggedIn" class="nav-item">
-  <a class="nav-link"  (click)="authService.logout()">Logout</a>
-</li>
   
+
+
+
+</mdb-navbar>
+   -->

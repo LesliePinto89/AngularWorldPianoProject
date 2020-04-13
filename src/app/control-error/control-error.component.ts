@@ -3,7 +3,7 @@ import { Component, OnInit, Input, ChangeDetectionStrategy, ChangeDetectorRef } 
 @Component({
   template: `<p class="help is-danger" [class.hide]="_hide">{{_text}}</p>`,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  styleUrls: ['./control-error.component.css']
+  styleUrls: ['./control-error.component.scss']
 })
 export class ControlErrorComponent implements OnInit {
   _text;

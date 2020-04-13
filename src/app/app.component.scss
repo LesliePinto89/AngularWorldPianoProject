@@ -31,5 +31,12 @@ html{
     display:block;
     clear:both;
   }
+
+ .content-flex-wrapper{
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between
+ }
   
  

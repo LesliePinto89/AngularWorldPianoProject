@@ -5,7 +5,7 @@ import { ApiService } from '../api.service';
 @Component({
   selector: 'app-jazz-details',
   templateUrl: './jazz-details.component.html',
-  styleUrls: ['./jazz-details.component.css']
+  styleUrls: ['./jazz-details.component.scss']
 })
 export class JazzDetailsComponent implements OnInit {
 
